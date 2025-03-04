@@ -26,6 +26,22 @@ public class Locators extends Base{
 	
 	driver.findElement(By.xpath("//button[starts-with(text(),'Show ')]"));//if we want to search by the first word of a long sentence or a paragraph.
 	
+	driver.findElement(By.xpath("//button[@id='button-one' and @type='button']"));//and in here used to locate with multiple attributes for a clear 1 of 1
+	
+	driver.findElement(By.xpath("//button[@id='button-one' or @id='button-one-electronics']"));//any of them matches
+	
+	driver.findElement(By.xpath(" //div[contains(text(),'Single Input Field')]//parent::div[@class='card']"));//using parent
+	
+	driver.findElement(By.xpath(" //div[@class='card']//child::button[@id='button-one']"));//using child
+	
+	driver.findElement(By.xpath(" //button[@id='button-one']//following::div[@class='card']"));//using following...the tags below the considered tag
+	
+	driver.findElement(By.xpath(" //button[@id='button-one']//preceding::div[@class='card']"));//using preceding...the tags above the considered tag
+	
+	driver.findElement(By.xpath(" //button[@id='button-one']//ancestor::div"));
+	
+	driver.findElement(By.xpath(" //div[@class='card']//descendant::div"));
+	
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

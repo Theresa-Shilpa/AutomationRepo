@@ -26,14 +26,22 @@ public class FileUpload extends Base{
 		driver.navigate().to(" https://www.ilovepdf.com/pdf_to_word");
 		WebElement selectPdf = driver.findElement(By.xpath("//a[@id='pickfiles']"));
 		selectPdf.click();
-		 StringSelection s = new StringSelection("C:\\Users\\HP\\git\\AutomationRepo\\AutomationCourse\\src\\test\\resources\\STUDENT DETAILS.xlsx"); 
+		 StringSelection s = new StringSelection("C:\\Users\\HP\\git\\AutomationRepo\\AutomationCourse\\src\\test\\resources\\header and footer menu listing.xlsx - final header menu.pdf");
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s,null);  
+			
 			Robot robot = new Robot(); 
+			robot.delay(3000);
 			 robot.keyPress(KeyEvent.VK_ENTER); 
 		      //releasing enter 
 		      robot.keyRelease(KeyEvent.VK_ENTER); 
 		      robot.keyPress(KeyEvent.VK_CONTROL); 
 		      robot.keyPress(KeyEvent.VK_V);
+		      robot.keyRelease(KeyEvent.VK_CONTROL); 
+ 		      robot.keyRelease(KeyEvent.VK_V); 
+ 		      robot.keyPress(KeyEvent.VK_ENTER); 
+ 		       
+ 		 
+ 		      robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
